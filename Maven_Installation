@@ -22,23 +22,23 @@ then
         sleep 1
         echo Maven software installation will start in a moment...
         sleep 1
-        sudo wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.zip
+        sudo wget https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.zip
         echo Unzipping to start in a moment...
         sleep 1
-        sudo unzip apache-maven-3.8.6-bin.zip
+        sudo unzip apache-maven-3.9.1-bin.zip
         echo Deleting the zip file...
         sleep 1
-        sudo rm -rf apache-maven-3.8.6-bin.zip
+        sudo rm -rf apache-maven-3.9.1-bin.zip
         echo Renaming the installation directory...
         sleep 1
-        sudo mv apache-maven-3.8.6/ maven
-        echo Setting Environmental Variable for $whoami ...
-        sleep 1
+        sudo mv apache-maven-3.9.1/ maven
+        #echo Setting Environmental Variable for $whoami ...
+        #sleep 1
         #echo "export M2_HOME=/opt/maven" >> ~/.bash_profile 
         #echo "export PATH=$PATH:$M2_HOME/bin" >> ~/.bash_profile 
-        echo Refreshing ".bash_profile" file...
-        source ~/.bash_profile
-        mvn -v
+        #echo Refreshing ".bash_profile" file...
+        #source ~/.bash_profile
+        #mvn -v
         sudo su $(whoami)
 else
         echo You will need to set up an AWS server with a minimum of 4GB RAM.
