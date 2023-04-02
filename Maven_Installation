@@ -1,5 +1,5 @@
 #!/bin/sh
-echo Have you created a RedHat AWS server (t2.micro will work)? Enter 1 for yes and 2 for no.
+echo Have you created a RedHat AWS server. Note that t2.micro will work? Enter 1 for yes and 2 for no.
 read response
 if
         (( $response == 1 ))
@@ -58,7 +58,7 @@ Step 2:
 =======
 Append the following to the file:
 export M2_HOME=/opt/maven
-PATH=$PATH:$M2_HOME/bin
+export PATH=$PATH:$M2_HOME/bin
 
 Step 3:
 =======
