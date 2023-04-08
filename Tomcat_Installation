@@ -11,7 +11,7 @@ then
         sleep 1
         cd /opt
         echo Installing apps to get us running...
-        sudo yum install wget vim tree unzip -y
+        sudo yum install wget tree -y
         echo Installing java...
         sudo yum install java-1.8.0-openjdk-devel -y
         sleep 1
@@ -19,15 +19,15 @@ then
         sleep 1
         echo Installing Tomcat...
         sleep 1
-        sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz
-        echo Unzipping the Tomcat file...
-        sudo tar -xvf apache-tomcat-9.0.71.tar.gz
+        sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.73/bin/apache-tomcat-9.0.73.tar.gz
+        echo Extracting the Tomcat file...
+        sudo tar -xvf apache-tomcat-9.0.73.tar.gz
         echo Deleting the zip file...
         sleep 1
-        sudo rm apache-tomcat-9.0.71.tar.gz
+        sudo rm apache-tomcat-9.0.73.tar.gz
         echo Renaming the Tomcat home directory...
         sleep 1
-        sudo mv apache-tomcat-9.0.71 tomcat9
+        sudo mv apache-tomcat-9.0.73 tomcat9
         echo Changing ownership of the Tomcat home directory...
         sleep 1
         sudo chown -R "$(whoami)":"$(whoami)" tomcat9
