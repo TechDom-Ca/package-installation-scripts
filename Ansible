@@ -1,1 +1,35 @@
+# Launch an Ubuntu machine (t2.micro is sufficient for a demo)
 
+
+sudo adduser ansible
+sudo passwd ansible
+
+### Give the user sudo rights by adding user to sudo group
+sudo usermod -aG sudo ansible 
+
+### Enable password authentication in the SSH config file
+### Restart the SSH service
+
+### Switch to the ansible user and check if Python is installed (otherwise install Python)
+sudo su - ansible
+python --version
+python3 --version
+
+### Configure the PPA on your machine and install Ansible:
+sudo apt update
+sudo apt install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+ansible --version
+
+# Launch 2 RedHat machines (t2.micro is sufficient for a demo)
+
+
+sudo adduser ansible
+sudo passwd ansible
+
+### Give the user sudo rights by adding user to wheel group
+sudo usermod -aG wheel ansible 
+
+### Enable password authentication in the SSH config file
+### Restart the SSH service
