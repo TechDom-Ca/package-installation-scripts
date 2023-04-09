@@ -22,6 +22,8 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 ansible --version
 
+### https://docs.ansible.com/ansible/2.9/installation_guide/intro_installation.html
+
 # Launch 2 RedHat machines (t2.micro is sufficient for a demo)
 
 
