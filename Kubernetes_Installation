@@ -6,7 +6,7 @@
 
 # Update the apt package index and install packages needed to use the Kubernetes apt repository
 sudo apt-get update -y
-sudo apt-get install -y ca-certificates curl
+sudo apt-get install -y apt-transport-https ca-certificates curl
 
 # Download the Google Cloud public signing key
 # sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
